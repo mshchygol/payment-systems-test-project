@@ -1,0 +1,26 @@
+.promocode-label {
+    display: block;
+    margin-bottom: 12px;
+    font-weight: 500;
+    font-size: 16px;
+    opacity: .5;
+}
+
+.promocode-input {
+    font-size: 16px;
+    font-weight: 800;
+    padding: 0 16px;
+    height: 42px;
+    width: 100%;
+    max-width: 455px;
+    border-radius: 4px;
+    background: var(--card-background-color);
+
+    &[data-valid="true"] {
+        background: var(--card-background-color) url("/img/check-circle-icon.svg") no-repeat no-repeat calc(100% - 16px);
+    }
+
+    &:disabled {
+        opacity: .5;
+    }
+}

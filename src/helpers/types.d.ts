@@ -5,6 +5,7 @@ export type PaymentMethod = {
     logo: string;
     name: string;
     commission: number;
+    label?: string;
 }
 
 export type Transaction = {

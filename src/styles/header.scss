@@ -1,0 +1,137 @@
+header {
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    height: var(--header-height);
+    box-shadow: 0px 2px 7px 0px #0000005E;
+    background-color: var(--background-color);
+}
+
+.header-container {
+    max-width: var(--max-width);
+    height: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-button {
+    background-color: var(--background-color);
+    vertical-align: super;
+    margin-right: 24px;
+
+    &:hover {
+        cursor: pointer;
+        opacity: 0.7;
+    }
+}
+
+.close-button {
+    background-color: var(--background-color);
+
+    &:hover {
+        cursor: pointer;
+        opacity: 0.7;
+    }
+}
+
+.sidebar-menu {
+    position: fixed;
+    z-index: 2;
+    left: -320px;
+    height: 100%;
+    width: 320px;
+    padding: 0 20px;
+    box-shadow: 0px 2px 7px 0px #00000014;
+    background-color: var(--sidebar-menu-color);
+    transition: .6s;
+
+    &--open {
+        transition: .6s;
+        left: 0;
+    }
+
+    &__header {
+        height: var(--header-height);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__items {
+        font-size: 16px;
+        font-weight: 800;
+        margin-top: 20px;
+
+        li {
+            margin: 20px 0;
+
+            &:hover {
+                cursor: pointer;
+                opacity: 0.7;
+            }
+        }
+    }
+}
+
+.icons-wrapper {
+    display: flex;
+    align-items: center;
+
+    .icon {
+        margin-right: 26px;
+
+        &:hover {
+            cursor: pointer;
+            opacity: 0.7;
+        }
+    }
+}
+
+.action-block {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 4px;
+    padding-left: 12px;
+    margin-right: 10px;
+    height: 36px;
+    background-color: var(--action-block-background-color);
+
+    &:hover {
+        cursor: pointer;
+    }
+
+
+    &__balance {
+        font-size: 14px;
+        font-weight: 800;
+        margin-right: 6px;
+    }
+
+    &__promotion {
+        height: 17px;
+        width: 21px;
+        font-size: 8px;
+        text-align: center;
+        line-height: 17px;
+        font-weight: 900;
+        border-radius: 3px;
+        margin-right: 8px;
+        background-color: var(--promotion-background-color);
+    }
+
+    &__plus {
+        width: 36px;
+        height: 36px;
+        margin-left: 8px;
+        background-color: var(--promotion-background-color);
+        text-align: center;
+        line-height: 40px;
+
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+}

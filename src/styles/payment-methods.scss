@@ -10,6 +10,7 @@
 }
 
 .payment-method-card {
+    position: relative;
     background-color: var(--card-background-color);
     border-radius: 6px;
     box-shadow: 4px 4px 5px 0px #0000000D;
@@ -45,5 +46,26 @@
     &__commission {
         font-size: 12px;
         opacity: 0.5;
+    }
+
+    &__label {
+        position: absolute;
+        align-content: center;
+        text-align: center;
+        top: -7px;
+        height: 17px;
+        width: 76px;
+        font-size: 8px;
+        font-weight: 900;
+        border-radius: 2px;
+        box-shadow: 0px 4px 6px 0px #00000026;
+
+        &--popular {
+            background-color: var(--promotion-background-color);
+        }
+
+        &--trusted {
+            background-color: var(--label-block-background-color);
+        }
     }
 }

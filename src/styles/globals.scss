@@ -2,6 +2,7 @@
 @import "/src/styles/payment-methods.scss";
 @import "/src/styles/promocode-input.scss";
 @import "/src/styles/transactions-history.scss";
+@import "/src/styles/header.scss";
 
 @font-face {
     font-family: Avenir;
@@ -13,6 +14,10 @@
     --font-color: #FFFFFF;
     --card-background-color: #30363E;
     --transaction-border-color: #1C1A1A;
+    --sidebar-menu-color: #20242A;
+    --promotion-background-color: #2D69EB;
+    --action-block-background-color: #4C84FF;
+    --label-block-background-color: #FC3D40;
     --main-red-color: #F9484B;
     --max-width: 1200px;
     --header-height: 84px;
@@ -29,15 +34,6 @@ main {
     max-width: var(--max-width);
     margin: auto;
     padding-top: var(--header-height);
-}
-
-header {
-    position: fixed;
-    z-index: 1;
-    width: 100%;
-    height: var(--header-height);
-    box-shadow: 0px 2px 7px 0px #0000005E;
-    background-color: var(--background-color);
 }
 
 .heading {

@@ -5,13 +5,15 @@ export const TRADITIONAL_PAYMENT_METHODS: PaymentMethod[] = [
         id: 1,
         logo: "mastercard-logo.svg",
         name: "Mastercard",
-        commission: 5
+        commission: 5,
+        label: "popular"
     },
     {
         id: 2,
         logo: "visa-logo.svg",
         name: "Visa",
-        commission: 5
+        commission: 5,
+        label: "trusted"
     },
     {
         id: 3,
@@ -65,3 +67,15 @@ export const CRYPTO_PAYMENT_METHODS: PaymentMethod[] = [
         commission: 0
     }
 ];
+
+export const SIDEBAR_MENU_ITEMS = [
+    "Casino Games",
+    "Live Games",
+    "TV-Bet",
+    "Sport Games",
+    "Virtual",
+    "Tournaments",
+    "Spin Shop",
+    "FAQ",
+    "Support Chat"
+]

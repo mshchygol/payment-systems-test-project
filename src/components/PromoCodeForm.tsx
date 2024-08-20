@@ -14,6 +14,14 @@ export default function PromoCodeForm({ heading, label }: PromoCodeFormProps) {
     
     const buttonDisabled = !inputValue || isSubmitted;
 
+    function handleInputChange(e: React.ChangeEvent<HTMLInputElement>) {
+        setInputValue(e.target.value);
+
+        if (isCodeValid) {
+            setIsCodeValid(false);
+        }
+    }
+
     function handleClick() {
         setIsSubmitted(true);
 
@@ -34,7 +42,7 @@ export default function PromoCodeForm({ heading, label }: PromoCodeFormProps) {
                 data-valid={`${isCodeValid}`}
                 disabled={isSubmitted}
                 value={inputValue}
-                onChange={(e) => setInputValue(e.target.value)}
+                onChange={handleInputChange}
             />
             <Button text="Apply" disabled={buttonDisabled} type={ButtonType.Small} onClick={handleClick}/>
         </>

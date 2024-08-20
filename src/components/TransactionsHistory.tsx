@@ -3,6 +3,7 @@ import { useEffect, useState } from "react"
 import Button from "./Button";
 import { ButtonType } from "@/helpers/enums";
 import { Transaction } from "@/helpers/types";
+import TransactionItem from "./Transaction";
 
 export default function TransactionsHistory() {
     const [transactions, setTransactions] = useState<Transaction[]>([]);
@@ -19,13 +20,12 @@ export default function TransactionsHistory() {
         <>
             <div className="transactions-header">
                 <h1 className="heading">Last Transactions</h1>
-                <button>FILTER</button>
+                <button className="transactions-filter">
+                    <img src="/img/filter-icon.svg" alt="filter icon image"/>
+                </button>
             </div>
-            {transactions.map(({ id, transactionNumber, amountPayed }) => <div key={id}>
-                <span>transaction N{transactionNumber} </span><span>----- payed: {amountPayed}$</span>
-                <p>--------------------------------------------------------------------------------------------</p>
-            </div>)}
-            <div>
+            {transactions.map((transaction) => <TransactionItem key={transaction.id} transaction={transaction}/>)}
+            <div className="transactions-button">
                 <Button text="Show More" type={ButtonType.Medium} onClick={loadMoreTransactions}/>
             </div>
         </>

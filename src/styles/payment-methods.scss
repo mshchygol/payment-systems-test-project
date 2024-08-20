@@ -23,6 +23,11 @@
     align-items: center;
     justify-content: flex-end;
 
+    &:hover {
+        cursor: pointer;
+        opacity: 0.7;
+    }
+
     &:not(:last-child) {
         margin-right: 18px;
     }

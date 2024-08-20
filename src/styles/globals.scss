@@ -3,16 +3,23 @@
 @import "/src/styles/promocode-input.scss";
 @import "/src/styles/transactions-history.scss";
 
+@font-face {
+    font-family: Avenir;
+    src: url(Avenir-Light.woff);
+  }
+
 :root {
     --background-color: #202329;
     --font-color: #FFFFFF;
     --card-background-color: #30363E;
+    --transaction-border-color: #1C1A1A;
     --main-red-color: #F9484B;
     --max-width: 1200px;
     --header-height: 84px;
 }
 
 body {
+    font-family: Avenir;
     background-color: var(--background-color);
     color: var(--font-color);
     margin-bottom: 100px;
@@ -26,6 +33,7 @@ main {
 
 header {
     position: fixed;
+    z-index: 1;
     width: 100%;
     height: var(--header-height);
     box-shadow: 0px 2px 7px 0px #0000005E;
@@ -50,11 +58,25 @@ header {
     color: var(--font-color);
     margin-left: 18px;
 
+    &:hover {
+        cursor: pointer;
+        opacity: 0.7;
+    }
+
     &:disabled {
         opacity: .5;
     }
 
+    &--medium {
+        font-size: 14px;
+        font-weight: 900;
+        width: 280px;
+        height: 42px;
+    }
+
     &--small {
+        font-size: 16px;
+        font-weight: 800;
         width: 152px;
         height: 42px;
     }

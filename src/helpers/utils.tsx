@@ -38,3 +38,26 @@ function randomEnumValue<T>(enumObj: any): T[keyof T] {
     
     return enumValues[index] as T[keyof T];
 }
+
+export function formatDate(date: Date) {
+    const day = date.getDate();
+    const month = date.getMonth() + 1; // Months are zero-indexed, so add 1
+    const hours = date.getHours();
+    const minutes = date.getMinutes();
+    
+    // Format day and month to always be two digits
+    const formattedDay = day < 10 ? "0" + day : day;
+    const formattedMonth = month < 10 ? "0" + month : month;
+    
+    // Format minutes to always be two digits
+    const formattedMinutes = minutes < 10 ? "0" + minutes : minutes;
+    
+    // Determine AM or PM
+    const period = hours >= 12 ? "PM" : "AM";
+    
+    // Convert hours from 24-hour to 12-hour format
+    const formattedHours = hours % 12 || 12;
+    
+    // Format the date string
+    return `${formattedDay}.${formattedMonth} at ${formattedHours}:${formattedMinutes}${period}`;
+}

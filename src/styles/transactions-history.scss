@@ -8,3 +8,83 @@
         margin: 0;
     }
 }
+
+.transactions-filter {
+    height: 42px;
+    width: 42px;
+    border-radius: 4px;
+    background-color: var(--card-background-color);
+
+    &:hover {
+        cursor: pointer;
+        opacity: 0.7;
+    }
+
+    img {
+        vertical-align: middle;
+    }
+}
+
+.transactions-button {
+    text-align: center;
+    margin: 32px 0;
+}
+
+.transaction {
+    display: grid;
+    grid-template-columns: 48px repeat(5, 1fr);
+    grid-template-rows: 48px;
+    column-gap: 16px;
+    grid-template-areas: "logo name number date amount status";
+    border-bottom: 1px solid var(--transaction-border-color);
+    padding: 18px 0;
+
+    &__primary-text {
+        font-size: 16px;
+        font-weight: 800;
+    }
+
+    &__secondary-text {
+        font-size: 14px;
+        opacity: .5;
+    }
+
+    &__payment-method-logo {
+        grid-area: logo;
+        display: flex;
+        padding: 8px;
+        border-radius: 10px;
+        background-color: var(--card-background-color);
+
+        img {
+            width: 100%;
+            object-fit: fill;
+        }
+    }
+
+    &__payment-method-name {
+        grid-area: name;
+    }
+
+    &__number {
+        grid-area: number;
+    }
+
+    &__payment-date {
+        grid-area: date;
+    }
+
+    &__amount-payed {
+        grid-area: amount;
+    }
+
+    &__operation-status {
+        grid-area: status;
+    }
+}
+
+.align-transaction-cell {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}

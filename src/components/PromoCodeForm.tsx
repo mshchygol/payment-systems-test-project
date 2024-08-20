@@ -19,7 +19,7 @@ export default function PromoCodeForm({ heading, label }: PromoCodeFormProps) {
 
         setTimeout(() => {
             setIsSubmitted(false);
-            setIsCodeValid(inputValue.startsWith("ALPHA"));
+            setIsCodeValid(inputValue.length > 1);
         }, 1200)
     }
 

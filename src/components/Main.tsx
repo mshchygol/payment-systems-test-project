@@ -6,11 +6,11 @@ import TransactionsHistory from "./TransactionsHistory";
 export default function Main() {
     return (
         <main>
-            <h1 className="heading">Make a deposit</h1>
-            <h2 className="subheading">Choose payment method</h2>
-            <PaymentMethods label="Cards, e-money, PIN" paymentMethods={TRADITIONAL_PAYMENT_METHODS}/>
+            <h1 className="heading">Make A Deposit</h1>
+            <h2 className="subheading">Choose Payment Method</h2>
+            <PaymentMethods label="Cards, E-Money, PIN" paymentMethods={TRADITIONAL_PAYMENT_METHODS}/>
             <PaymentMethods label="Cryptocurrency" paymentMethods={CRYPTO_PAYMENT_METHODS}/>
-            <PromoCodeForm heading="Have a promo code?" label="Enter promo code here. It will activate a special bonus!"/>
+            <PromoCodeForm heading="Have A Promo Code?" label="Enter promo code here. It will activate a special bonus!"/>
             <TransactionsHistory/>
         </main>
     )

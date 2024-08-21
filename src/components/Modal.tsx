@@ -2,6 +2,8 @@ import ModalContext from "@/context/ModalContext";
 import PromoCodeForm from "./PromoCodeForm";
 import { useContext, useState } from "react";
 import { INCREMENT_BUTTONS } from "@/helpers/data";
+import Button from "./Button";
+import { ButtonType } from "@/helpers/enums";
 
 export default function Modal() {
     const [amount, setAmount] = useState(21);
@@ -38,7 +40,7 @@ export default function Modal() {
                     <div className="payment-method-wrapper">
                         {logo && <img src={`/img/${logo}`} alt={`${name} logo image`}/>}
                         <div>
-                            <p className="payment-method-name">{name}, {currency} - Commission {commission}%</p>
+                            <p className="payment-method-name">{name}, {currency} <span>&#183;</span> Commission {commission}%</p>
                             <p className="payment-method-hint">Please notice that you will send money in the {currency}</p>
                         </div>
                     </div>
@@ -55,6 +57,7 @@ export default function Modal() {
                 </div>
                 <p className="modal__hint">From 21.00 to 906.00 USD at a time</p>
                 <PromoCodeForm heading="Promo Code"/>
+                <Button text="Deposit" type={ButtonType.Large}/>
             </div>
         </div>
     )

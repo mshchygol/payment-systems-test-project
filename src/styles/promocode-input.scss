@@ -1,3 +1,9 @@
+.promocode-heading {
+    font-size: 18px;
+    font-weight: 800;
+    margin-bottom: 18px;
+}
+
 .promocode-label {
     display: block;
     margin-bottom: 12px;
@@ -27,4 +33,23 @@
 
 .promocode-wrapper {
     display: flex;
+}
+
+@media only screen and (max-width: 500px) {
+    .promocode-heading {
+        margin-bottom: 10px;
+    }
+
+    .promocode-label {
+        font-size: 10px;
+    }
+
+    .promocode-wrapper {
+        flex-direction: column;
+    }
+
+    .promocode-input {
+        width: auto;
+        margin-bottom: 12px;
+    }
 }

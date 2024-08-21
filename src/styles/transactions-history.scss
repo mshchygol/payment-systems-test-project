@@ -1,12 +1,23 @@
 .transactions-header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin-top: 32px;
     margin-bottom: 18px;
 
     .heading {
         margin: 0;
     }
+}
+
+.transactions-title-large {
+    display: block;
+}
+
+.transactions-title-small {
+    font-size: 18px;
+    font-weight: 800;
+    display: none;
 }
 
 .transactions-filter {
@@ -99,4 +110,86 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+}
+
+@media only screen and (max-width: 1000px) {
+    .align-transaction-cell {
+        padding-left: 8px;
+    }
+
+    .transactions-title-large {
+        display: none;
+    }
+
+    .transactions-title-small {
+        display: block;
+    }
+
+    .transactions-header {
+        margin-bottom: 4px;
+    }
+
+    .transactions-filter {
+        height: 24px;
+        width: 24px;
+        padding: 4px;
+        
+        img {
+            height: 18px;
+        }
+    }
+
+    .transaction {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 38px 32px;
+        row-gap: 16px;
+        column-gap: 0;
+        grid-template-areas:
+            "logo   logo     logo   status"
+            "name number date amount"
+        ;
+
+        &__payment-method-logo {
+            border-radius: 4px 0 0 4px;
+            background-color: var(--card-background-color);
+            // max-width: 70px;
+            // width: auto;
+            img {
+                width: auto;
+                max-width: 70px;
+            }
+        }
+
+        &__operation-status {
+            border-radius: 0 4px 4px 0;
+            background-color: var(--card-background-color);
+        }
+
+        &__operation-status.align-transaction-cell {
+            align-items: end;
+            padding-right: 10px;
+        }
+
+        &__primary-text {
+            font-size: 12px;
+        }
+
+        &__secondary-text {
+            font-size: 10px;
+            opacity: .6;
+        }
+    }
+}
+
+@media only screen and (max-width: 460px) {
+    .transaction {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 38px 32px 32px;
+        // row-gap: 16px;
+        grid-template-areas:
+            "logo status"
+            "name amount"
+            "number date"
+        ;
+    }
 }

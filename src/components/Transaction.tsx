@@ -15,7 +15,7 @@ export default function TransactionItem({ transaction }: TransactionItemProps) {
                 <img src={`/img/${paymentMethodLogo}`} alt={`${paymentMethodName} logo image`}/>
             </div>
             <div className="transaction__payment-method-name align-transaction-cell">
-                <p className="transaction__primary-text">by {paymentMethodName}, {paymentMethodName.includes("EUR") ? "EUR" : "USD"}</p>
+                <p className="transaction__primary-text">by {paymentMethodName}{paymentMethodName.includes("EUR") ? "" : ", USD"}</p>
                 <p className="transaction__secondary-text">Withdraw</p>
             </div>
             <div className="transaction__number align-transaction-cell">

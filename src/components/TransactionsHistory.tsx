@@ -19,8 +19,9 @@ export default function TransactionsHistory() {
     return (
         <>
             <div className="transactions-header">
-                <h1 className="heading">Last Transactions</h1>
-                <button className="transactions-filter">
+            <h1 className="heading transactions-title-large">Last Transactions</h1>
+            <h1 className="transactions-title-small">Transactions</h1>
+            <button className="transactions-filter">
                     <img src="/img/filter-icon.svg" alt="filter icon image"/>
                 </button>
             </div>

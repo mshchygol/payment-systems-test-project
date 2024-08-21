@@ -33,7 +33,7 @@ export default function PromoCodeForm({ heading, label }: PromoCodeFormProps) {
 
     return (
         <div>
-            <h2 className="subheading">{heading}</h2>
+            <h2 className="promocode-heading">{heading}</h2>
             {label && <label className="promocode-label" htmlFor="promocode">{label}</label>}
             <div className="promocode-wrapper">
                 <input

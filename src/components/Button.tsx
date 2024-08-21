@@ -4,7 +4,7 @@ interface ButtonProps {
     text: string;
     disabled?: boolean;
     type: ButtonType;
-    onClick: () => void;
+    onClick?: () => void;
 }
 
 export default function Button({ text, disabled, type, onClick }: ButtonProps) {

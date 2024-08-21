@@ -28,23 +28,25 @@ export default function PromoCodeForm({ heading, label }: PromoCodeFormProps) {
         setTimeout(() => {
             setIsSubmitted(false);
             setIsCodeValid(inputValue.length > 1);
-        }, 1200)
+        }, 1000)
     }
 
     return (
-        <>
+        <div>
             <h2 className="subheading">{heading}</h2>
             {label && <label className="promocode-label" htmlFor="promocode">{label}</label>}
-            <input
-                className="promocode-input" 
-                type="text" name="promocode" 
-                id="promocode"
-                data-valid={`${isCodeValid}`}
-                disabled={isSubmitted}
-                value={inputValue}
-                onChange={handleInputChange}
-            />
-            <Button text="Apply" disabled={buttonDisabled} type={ButtonType.Small} onClick={handleClick}/>
-        </>
+            <div className="promocode-wrapper">
+                <input
+                    className="promocode-input" 
+                    type="text" name="promocode" 
+                    id="promocode"
+                    data-valid={`${isCodeValid}`}
+                    disabled={isSubmitted}
+                    value={inputValue}
+                    onChange={handleInputChange}
+                />
+                <Button text="Apply" disabled={buttonDisabled} type={ButtonType.Small} onClick={handleClick}/>
+            </div>
+        </div>
     )
 }

@@ -31,7 +31,7 @@ export default function TransactionItem({ transaction }: TransactionItemProps) {
                 <p className="transaction__secondary-text">Amount Payed</p>
             </div>
             <div className="transaction__operation-status align-transaction-cell">
-                <p className="transaction__primary-text">{operationStatus}</p>
+                <p className={`transaction__primary-text transaction__primary-text--${operationStatus.toLowerCase()}`}>{operationStatus}</p>
                 <p className="transaction__secondary-text">Operation Status</p>
             </div>
         </div>

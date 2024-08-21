@@ -2,6 +2,7 @@ import PaymentMethods from "./PaymentMethods";
 import { CRYPTO_PAYMENT_METHODS, TRADITIONAL_PAYMENT_METHODS } from "@/helpers/data";
 import PromoCodeForm from "./PromoCodeForm";
 import TransactionsHistory from "./TransactionsHistory";
+import Modal from "./Modal";
 
 export default function Main() {
     return (
@@ -12,6 +13,7 @@ export default function Main() {
             <PaymentMethods label="Cryptocurrency" paymentMethods={CRYPTO_PAYMENT_METHODS}/>
             <PromoCodeForm heading="Have A Promo Code?" label="Enter promo code here. It will activate a special bonus!"/>
             <TransactionsHistory/>
+            <Modal/>
         </main>
     )
 }

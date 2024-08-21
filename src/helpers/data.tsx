@@ -79,3 +79,5 @@ export const SIDEBAR_MENU_ITEMS = [
     "FAQ",
     "Support Chat"
 ]
+
+export const INCREMENT_BUTTONS = [10, 20, 30, 50, 100];

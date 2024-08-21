@@ -1,5 +1,4 @@
 import { SIDEBAR_MENU_ITEMS } from "@/helpers/data";
-import { useState } from "react";
 
 interface SideBarMenuProps {
     open: boolean;

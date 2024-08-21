@@ -3,6 +3,7 @@
 @import "/src/styles/promocode-input.scss";
 @import "/src/styles/transactions-history.scss";
 @import "/src/styles/header.scss";
+@import "/src/styles/modal.scss";
 
 @font-face {
     font-family: Avenir;
@@ -17,8 +18,12 @@
     --sidebar-menu-color: #20242A;
     --promotion-background-color: #2D69EB;
     --action-block-background-color: #4C84FF;
+    --modal-background-color: #21262C;
     --label-block-background-color: #FC3D40;
     --main-red-color: #F9484B;
+    --processing-label-color: #C69516;
+    --active-label-color: #00BA61;
+    --performed-label-color: #2658D7;
     --max-width: 1200px;
     --header-height: 84px;
 }
@@ -65,14 +70,14 @@ main {
 
     &--medium {
         font-size: 14px;
-        font-weight: 900;
+        font-weight: 700;
         width: 280px;
         height: 42px;
     }
 
     &--small {
         font-size: 16px;
-        font-weight: 800;
+        font-weight: 600;
         width: 152px;
         height: 42px;
     }
